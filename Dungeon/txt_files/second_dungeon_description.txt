@@ -1,0 +1,6 @@
+You step cautiously into the second dungeon, its cold stone walls looming high. At the very center of the chamber, a lone figure stirs — a decaying zombie, its hollow eyes locking onto you with malicious intent. The air is thick with the stench of rot, and a low growl rumbles from the creature’s throat as it shambles toward you. There's no way forward without a fight. Beyond the zombie, two exits beckon: one to the south and another to the east. But to reach them, you must first face this undead horror and defeat it to continue your journey.
+
+What do you do?
+
+(A) Attack
+(F) Try to flee

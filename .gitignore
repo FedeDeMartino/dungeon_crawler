@@ -1,0 +1,8 @@
+# Ignore build output directories
+bin/
+obj/
+
+# Visual Studio Code settings
+.vscode/
+
+.editorconfig

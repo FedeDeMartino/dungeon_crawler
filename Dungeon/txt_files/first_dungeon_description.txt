@@ -1,0 +1,8 @@
+As you enter the room, the stone walls close in around you, casting long shadows in the flickering torchlight. The air is damp and musty, with a sense of stillness that chills your spine. A narrow hallway stretches ahead, leading to a simple stone altar at the far end of the chamber. The silence is oppressive, broken only by the soft echo of your footsteps. The path forward is unknown, but this is where your journey begins.
+
+As you approach the altar, you notice a rusty sword resting atop it, its blade dulled by time and disuse. The metal seems fragile, yet it still holds a hint of its former power. To your left, a sturdy wooden door is set into the wall, its surface weathered but intact. It creaks slightly, as though waiting to reveal whatever lies beyond.
+
+What do you do?
+
+(T) Take the sword
+(D) Open the door

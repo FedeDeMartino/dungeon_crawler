@@ -9,12 +9,14 @@ namespace Dungeon.Services
         private readonly Monster _zombie;
         private readonly StoryManager _storyManager;
 
+        private readonly IFileReader _fileReader;
+
         public SecondDungeonCreator(Adventurer player)
         {
             _player = player;
             _zombie = new Monster("Zombie");
-            IFileReader fileReader = new FileReaderWrapper();
-            _storyManager = new StoryManager(fileReader);
+            _fileReader = new FileReader();
+            _storyManager = new StoryManager(_fileReader);
         }
 
         public void ExploreDungeon()
@@ -86,7 +88,7 @@ namespace Dungeon.Services
                     ConsoleWriter.WriteSameLine(".");
                     Thread.Sleep(500);
                 }
-                string message = FileReader.getFileContent("./txt_files/victory_description.txt");
+                string message = _fileReader.GetFileContent("./txt_files/victory_description.txt");
                 ConsoleWriter.AddEmptyLine();
                 ConsoleWriter.WriteSuccess(message);
             }
@@ -98,7 +100,7 @@ namespace Dungeon.Services
                     ConsoleWriter.WriteSameLine(".");
                     Thread.Sleep(500);
                 }
-                string message = FileReader.getFileContent("./txt_files/loss_description.txt");
+                string message = _fileReader.GetFileContent("./txt_files/loss_description.txt");
                 ConsoleWriter.AddEmptyLine();
                 ConsoleWriter.WriteError(message);
             }

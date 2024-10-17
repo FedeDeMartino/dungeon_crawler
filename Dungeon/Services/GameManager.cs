@@ -10,7 +10,7 @@ namespace Dungeon.Services
 
         public GameManager()
         {
-            IFileReader fileReader = new FileReaderWrapper();
+            IFileReader fileReader = new FileReader();
             _storyManager = new StoryManager(fileReader);
             _player = new Adventurer("NoOne");
         }

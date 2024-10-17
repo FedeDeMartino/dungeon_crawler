@@ -10,18 +10,20 @@ namespace Dungeon.Tests
         [Fact]
         public void GetFileContent_ShouldReturnFileContent_WhenFileExists()
         {
-            var fileName = "introduction.txt";
-            var expectedContent = "Introduction test\n";
+            string fileName = "introduction.txt";
+            string expectedContent = "Introduction test\n";
+            FileReader fileReader = new FileReader();
 
-            var result = FileReader.getFileContent("../../../txt_files/introduction.txt");
+            string result = fileReader.GetFileContent("../../../txt_files/introduction.txt");
             Assert.Equal(expectedContent, result);
         }
 
         [Fact]
         public void GetFileContent_ShouldReturnErrorMessage_WhenFileDoesNotExist()
         {
-            var fileName = "nonexistent.txt";
-            var result = FileReader.getFileContent(fileName);
+            string fileName = "nonexistent.txt";
+            FileReader fileReader = new FileReader();
+            string result = fileReader.GetFileContent(fileName);
 
             Assert.Contains("Could not find file at", result);
         }

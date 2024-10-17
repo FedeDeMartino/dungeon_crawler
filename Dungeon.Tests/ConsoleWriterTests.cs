@@ -10,8 +10,8 @@ namespace Dungeon.Tests
         [Fact]
         public void Write_ShouldOutputMessageToConsole()
         {
-            var expectedMessage = "Hello, Adventurer!";
-            var output = new StringWriter();
+            string expectedMessage = "Hello, Adventurer!";
+            StringWriter output = new StringWriter();
             Console.SetOut(output);
             ConsoleWriter.Write(expectedMessage);
 
@@ -21,8 +21,8 @@ namespace Dungeon.Tests
         [Fact]
         public void WriteSameLine_ShouldOutputMessageWithoutNewLineToConsole()
         {
-            var expectedMessage = "Hello, Adventurer!";
-            var output = new StringWriter();
+            string expectedMessage = "Hello, Adventurer!";
+            StringWriter output = new StringWriter();
             Console.SetOut(output);
             ConsoleWriter.WriteSameLine(expectedMessage);
 
@@ -32,8 +32,8 @@ namespace Dungeon.Tests
         [Fact]
         public void WriteSuccess_ShouldOutputGreenMessageToConsole()
         {
-            var expectedMessage = "Success!";
-            var output = new StringWriter();
+            string expectedMessage = "Success!";
+            StringWriter output = new StringWriter();
             Console.SetOut(output);
             ConsoleWriter.WriteSuccess(expectedMessage);
 
@@ -43,8 +43,8 @@ namespace Dungeon.Tests
         [Fact]
         public void WriteError_ShouldOutputRedMessageToConsole()
         {
-            var expectedMessage = "Error!";
-            var output = new StringWriter();
+            string expectedMessage = "Error!";
+            StringWriter output = new StringWriter();
             Console.SetOut(output);
             ConsoleWriter.WriteError(expectedMessage);
 
@@ -54,11 +54,11 @@ namespace Dungeon.Tests
         [Fact]
         public void WriteSeparator_ShouldOutputSeparatorToConsole()
         {
-            var output = new StringWriter();
+            StringWriter output = new StringWriter();
             Console.SetOut(output);
             ConsoleWriter.WriteSeparator();
 
-            var expectedOutput = Environment.NewLine +
+            string expectedOutput = Environment.NewLine +
                                  "==================================" + Environment.NewLine +
                                  Environment.NewLine;
             Assert.Equal(expectedOutput, output.ToString());
@@ -67,7 +67,7 @@ namespace Dungeon.Tests
         [Fact]
         public void AddEmptyLine_ShouldAddOneEmptyLineToConsole()
         {
-            var output = new StringWriter();
+            StringWriter output = new StringWriter();
             Console.SetOut(output);
             ConsoleWriter.AddEmptyLine();
 

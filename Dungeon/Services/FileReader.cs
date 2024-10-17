@@ -1,12 +1,12 @@
 namespace Dungeon.Services
 {
-    public class FileReader
+    public class FileReader : IFileReader
     {
-        public static string getFileContent(string filePath)
+        public string GetFileContent(string path)
         {
             try
             {
-                return File.ReadAllText(filePath);
+                return File.ReadAllText(path);
             }
             catch (Exception e)
             {
